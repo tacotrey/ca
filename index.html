@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy-Integrated Coaching Assessment (EICA)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Energy-Integrated Coaching Assessment (EICA)</h1>
+  <div class="sub">ICF competencies x masculine / feminine energy x chakra centers</div>
+</header>
+<main>
+  <div class="card" id="intro">
+    <h2 style="margin:0 0 6px">How this works</h2>
+    <div class="hint">
+      You’ll see <b>one statement per screen</b>. Rate how often it describes your in‑session behavior.<br>
+      Scale: <b>Always (3)</b>, <b>Often (2)</b>, <b>Sometimes (1)</b>, <b>Rarely/Never (0)</b>. Use <b>N/A</b> to skip.<br><br>
+      Behind the scenes each item maps to an ICF competency and an energy expression (masculine/feminine/integration). 
+      After the first three items in a competency, the tool may add a <b>targeted follow‑up</b> if it senses a style gap, 
+      so your total number of questions can vary between 24-30.
+    </div>
+    <div class="hr"></div>
+    <button id="startBtn" class="btn primary">Start assessment</button>
+  </div>
+
+  <div class="card" id="wizard" style="display:none">
+    <div class="qnum"><span id="qIndex">Question 1</span> · <span id="qTotal">/ 24</span></div>
+    <div class="progress"><span id="qProgress"></span></div>
+    <div class="qtext" id="qText">Question text</div>
+    <div class="scale" id="scale"></div>
+    <div class="actions">
+      <button class="btn ghost" id="prevBtn">Previous</button>
+      <button class="btn ghost" id="skipBtn">N/A</button>
+      <button class="btn primary" id="nextBtn">Next</button>
+      <button class="btn" id="finishBtn" style="display:none">Finish & view results</button>
+    </div>
+    <div class="muted" id="progressNote"></div>
+  </div>
+
+  <div id="results" style="display:none"></div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
